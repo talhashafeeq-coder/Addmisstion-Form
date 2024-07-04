@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="Addmisstion.css">
+    <title>Class Addmisstion From</title>
+    <style>
+        body {
+            background-color:#bdc3c7;
+        } 
+    </style>
+</head>
+
+<body>
+    <!--Heading Website-->
+    <div class="container-fluid text-center mt-3">
+        <h2>Addmisstion 12 <sup>th</sup>class<br>
+            (New Student)</h2>
+    </div>
+    <!--Name & Fee & CheckBox-->
+    <div class="container">
+        <div class="spinner-grow text-warning"></div>
+        <h4 style="text-align: right; " id="demo"></h4>
+        <form action="" onsubmit="return submitFun()">
+            <h5>Enter Student Name:</h5> <span id="error"></span><br>
+            <input type="text" name="Fname" id="uname" onkeyup="abc(this)" onkeypress="keypres(this)"
+                onblur="myBlu(this)" onfocus="myfou(this)" placeholder="Name...">
+            <h5 class="mt-3">
+                Your Marks(11class):
+            </h5>
+            <input type="number" placeholder="Marks" onkeypress="keypres(this)" onblur="myBlu(this)"
+                onfocus="myfou(this)" id="mark">
+            <p style="font-size: 10px;" id="showfee">Enter Your Mark...</p>
+            <button type="button" onclick="feecheck()" class="btn btn-outline-success btn-sm" id="fee">Mark Check</button>
+            <h5 class="mt-3">
+                Select Your Subject:
+            </h5>
+            <input type="checkbox" name="subject" value="Computer,Eco,Stat"> ICS &nbsp;
+            <input type="checkbox" name="subject" value="Isl,Stat,Counting">FA &nbsp;
+            <input type="checkbox" name="subject" value="Bio,English,Math"> Fsc &nbsp;<br>
+            <br>
+            <h5 class="mt-3">
+                Select Class:
+            </h5>
+            <label for="c1"><input type="radio" name="subject" value="12(Red)"> 12<sup>th</sup> Red</label> &nbsp;
+            <label for="c1"><input type="radio" name="subject" value="12(Green)"> 12<sup>th</sup> Green</label> &nbsp;
+            <label for="c1"><input type="radio" name="subject" value="12(Yellow)"> 12<sup>th</sup> Yellow</label> &nbsp;
+            <label for="c1"><input type="radio" name="subject" value="12(Blue)"> 12<sup>th</sup> Blue</label> &nbsp;
+            <br><br>
+            <h5 class="mt-3">Need School Transport: </h5>
+            <label for="tr1"><input type="checkbox" name="subject" value="You  Need Transport"> Yes</label> &nbsp;
+            <label for="tr1"><input type="checkbox" name="subject" value="You Not Need Transport "> No</label> &nbsp;
+            <br><br>
+            <!--Button Check-->
+            <button type="button" class="btn btn-outline-success btn-sm" id="btn"
+                onclick="abc(this)">Check</button><br><br>
+            <!--OutPut CheckBox Result-->
+            <input type="text" id="result" onfocus="myfou(this)" onblur="myBlu(this)" size="70">
+            <!--Submit Button-->
+            <button type="submit" onclick="submitFun(this)" class="btn btn-outline-success btn-sm"
+                id="confirm">Confirm</button>
+        </form>
+
+    </div>
+    <hr>
+    <hr>
+    <hr>
+    <!--Teacher List#-->
+    <div class="container">
+        <h3 class="text-center">Academy Teacher:</h3>
+        <h5>Select Tution Teacher: </h5>
+        <table class="table table-dark table-hover" id="table1">
+            <thead>
+                <tr>
+                    <td>Select</td>
+                    <td>Subject</td>
+                    <td>Incharge</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="checktab" value="Sir Ali (ISI)" id="check"> Sir Ali
+                    </td>
+                    <td>Isl</td>
+                    <td>Not</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="checktab" value="Sir Rizwan Rana (Math)" id="check"> Sir Rizwan
+                        Rana
+                    </td>
+                    <td>Math</td>
+                    <td>Yes(12 Bule)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="checktab" value="Sir MB (Phy)" id="check"> Sir MB
+                    </td>
+                    <td>Physics</td>
+                    <td>Not</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="checktab" value="Sir Adeel (Chem)" id="check"> Sir Adeel
+                    </td>
+                    <td>Chemistry</td>
+                    <td>Yes(12 Green)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="checktab" value="Sir Asad Ch (Stat)" id="check"> Sir Asad Ch
+                    </td>
+                    <td>Statistics</td>
+                    <td>Yes(11 Red)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="checktab" value="Shah Sab (Urdu)" id="check"> Shah Sab
+                    </td>
+                    <td>Urdu</td>
+                    <td>Not</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="checktab" onfocus="myfou(this)" onblur="myBlu(this)"
+                            onkeypress="keypres(this)" value="Abul-Raman (Comp)" id="check"> Abul-Raman
+                    </td>
+                    <td>Computer</td>
+                    <td>Not</td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="button" class="btn btn-outline-success btn-sm" id="tablebtn">Select Teacher</button>
+        <div id="demo2"></div>
+    </div>
+    <!--About Teacher & Collage-->
+    <div class="container mt-5">
+        <button type="button" class="btn btn-outline-success btn-sm" id="set1">About Collage</button>
+        <button type="button" class="btn btn-outline-success btn-sm" id="set2">About Teacher</button>
+        <button type="button" class="btn btn-outline-success btn-sm" id="set3">About Position Holder</button>
+        <button type="button" class="btn btn-outline-success btn-sm" id="set4">Remove About</button>
+        <br><br>
+        <div id="outputAbout"></div>
+    </div>
+    <hr>
+    <hr>
+    <hr>
+    <!--Some Information -->
+    <div class="container">
+        <h4 style="text-align: center;"> Send Some Information :</h4>
+    </div>
+    <!--Input Data-->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-sm-6">
+                <form action="">
+                    <h6>Board Roll No# :</h6>
+                    <input type="number" id="RollNo" onkeyup="test1(this)" onfocus="myfou(this)" onblur="myBlu(this)"
+                        onkeypress="keypres(this)" placeholder="RollNo#"><span id="err1"></span>
+                    <h6 class="mt-2">Center Name :</h6>
+                    <input type="text" id="center" onkeyup="test2(this)" onfocus="myfou(this)" onblur="myBlu(this)"
+                        onkeypress="keypres(this)" placeholder="CenterName"><span id="err2"></span>
+                    <h6 class="mt-2">Total Number :</h6>
+                    <input type="number" id="total" onkeyup="test3(this)" onfocus="myfou(this)" onblur="myBlu(this)"
+                        onkeypress="keypres(this)" placeholder="TatalNo#"><span id="err3"></span>
+                    <br>
+                </form>
+            </div>
+            <div class="col-sm-6 ">
+                <div id="err5"></div>
+                <h6>Your Name:</h6>
+                <input type="text" id="yName" onkeyup=" namefun(this)" onfocus="myfou(this)" onblur="myBlu(this)"
+                    onkeypress="keypres(this)" placeholder="Ali Ahmad">
+                <h6 class="mt-2">Father Name:</h6>
+                <input type="text" id="fName" onkeyup=" namefun(this)" onfocus="myfou(this)" onblur="myBlu(this)"
+                    onkeypress="keypres(this)" placeholder="M.Ahmad">
+                <div id="err6"></div>
+
+                <h6 class="mt-2">CNIN Number:</h6>
+                <input type="text" id="cnisno" onkeyup="cnsifun3(this)" onfocus="myfou(this)" onblur="myBlu(this)"
+                    onkeypress="keypres(this)" placeholder="30323-4242423">
+                <div id="err4"></div>
+            </div>
+        </div>
+        <button id="sendInformation" onclick="testFun(this)" class="btn btn-dark btn-sm mt-3">Send</button><br><br>
+    </div>
+    <div class="container">
+        <div id="Youname"></div>
+        <div id="fathername"></div>
+        <div id="cnis"></div>
+        <div id="totalno"></div>
+    </div>
+    <hr><hr><hr>
+    <!--Subject & Number Enter Student-->
+    <div class="container mt-3">
+        <h5 class="text-center">Enter Subject Number One By One</h5>
+        <h6>Subject :</h6>
+        <input type="text" id="subName"  onkeypress="keypres(this)" onblur="myBlu(this)"
+        onfocus="myfou(this)" placeholder="Subject...">
+        <h6>Subject Number :</h6>
+        <input type="number" id="subNo"  onkeypress="keypres(this)" onblur="myBlu(this)"
+        onfocus="myfou(this)" placeholder="Number..."> <br><br>
+        <button type="button" onclick="table()" class="btn btn-outline-success btn-sm">Send</button>
+        <table class="table mt-4" id="subTable">
+            <thead>
+                <th>Subject </th>
+                <th>Subject Number </th>
+            </thead>
+        </table>
+    </div>
+    <!--JavaScript-->
+  <script src="Addmisstion.js"></script>
+</body>
+
+</html>

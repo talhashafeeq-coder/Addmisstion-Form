@@ -1,0 +1,16 @@
+/* Heading animation */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Apply animation to the heading */
+.container-fluid h2 {
+    animation: slideInFromLeft 0.5s ease-out forwards; /* Animation duration and timing */
+}
